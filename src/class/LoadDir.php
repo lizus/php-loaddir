@@ -1,11 +1,11 @@
 <?php
-namespace Lizus;
+namespace Lizus\LoadDir;
 
 /*
 It is a static class for getting or loading files from a directory and its subdirectories
 use sample:
 
-use \Lizus\LoadDir;
+use \Lizus\LoadDir\LoadDir;
 $load=LoadDir::load_files(__DIR__.'/function');
 
  */
