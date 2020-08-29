@@ -41,7 +41,7 @@ class LoadDir
    * load files from $folder
    * @since 0.0.1
    * @param  string  $folder   [directory want load]
-   * @param  string  $fileType [file type want load, must can be used in `require_once`, default is php]
+   * @param  string  $fileType [file type want load, must can be used in `require`, default is php]
    * @param  string  $prefix   [the prefix string of the file name, if it is set, only files have the prefix will loaded]
    * @param  integer $levels   [depth of subdirectories]
    * @return boolean            [true if loaded, false if not]
@@ -52,7 +52,7 @@ class LoadDir
     if (!empty($files)) {
       foreach ($files as $f) {
         if (empty($prefix) || preg_match('/\/'.$prefix.'[-_0-9a-zA-Z]+\.'.$fileType.'$/',$f)) {
-          require_once $f;
+          require $f;
         }
       }
       return true;
